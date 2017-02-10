@@ -82,6 +82,17 @@ public final class PayloadBuilder {
         customAlert.put("title", title);
         return this;
     }
+    
+    /**
+	 * Create a custom alert (if none exist) and add a custom subtitle.
+	 *
+	 * @param subtitle the subtitle of the alert
+	 * @throws JSONException
+	 */
+    public PayloadBuilder alertSubtitle(final String subtitle) {
+        customAlert.put("subtitle", subtitle);
+        return this;
+	}
 
     /**
      * The key to a title string in the Localizable.strings file for the current localization.
